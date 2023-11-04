@@ -497,6 +497,23 @@
   },
   {
    "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import nbformat\n",
+    "\n",
+    "# Load the notebook\n",
+    "with open('recommender_system.ipynb', 'r', encoding='utf-8') as notebook_file:\n",
+    "    notebook_content = nbformat.read(notebook_file, as_version=4)\n",
+    "\n",
+    "# Save as JSON\n",
+    "with open('model.json', 'w', encoding='utf-8') as json_file:\n",
+    "    nbformat.write(notebook_content, json_file)"
+   ]
+  },
+  {
+   "cell_type": "code",
    "execution_count": null,
    "metadata": {},
    "outputs": [],
